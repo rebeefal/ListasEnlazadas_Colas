@@ -6,8 +6,7 @@ public class ListaEnlazada {
 
     private Nodo primero;
     private Nodo ultimo;
-    int contador = 0;
-    
+
     
     String todoElementos = "Lista :   ";
        
@@ -69,7 +68,8 @@ public class ListaEnlazada {
         return estado;
     }
  
-    public int mostrarTamanoActual(){  
+    public int mostrarTamanoActual(){ 
+        int contador =0;
         Nodo nodo = this.primero;        
         while(nodo!=null){
             contador++;

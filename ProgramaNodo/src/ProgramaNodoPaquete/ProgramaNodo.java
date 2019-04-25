@@ -46,6 +46,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");
+                    }catch (NullPointerException nullPointerException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
                     }
                     x=2;
                 }while(x!=2); 
@@ -64,7 +67,13 @@ public class ProgramaNodo extends javax.swing.JFrame {
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
                     }
+                    
+                    
+                    
                     x=2;
                 }while(x!=2);   
             }
@@ -80,6 +89,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null,
                                 "El valor ingresado no es válido");
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
                     }
@@ -98,6 +110,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null,
                                 "El valor ingresado no es válido");
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
                     }
@@ -120,6 +135,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
                     }
                     x=2;
                 }while(x!=2);    
@@ -138,6 +156,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
                     }
                     x=2;
                 }while(x!=2);  
@@ -154,6 +175,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null,
                                 "El valor ingresado no es válido");
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
                     }
@@ -175,6 +199,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null,
                                 "El valor ingresado no es válido");
                     }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
                     }
