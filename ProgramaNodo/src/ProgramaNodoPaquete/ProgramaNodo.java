@@ -6,12 +6,13 @@ import javax.swing.JOptionPane;
 
 public class ProgramaNodo extends javax.swing.JFrame {
 
+    // el constructor llama a otra función que se encarga de inicializar los componentes del GUI. 
     public ProgramaNodo() {
         iniComponentes();
     }
                         
+    
     private void iniComponentes() {
-
         numeroInsertarButton = new javax.swing.JButton();
         numeroInsertarTextField = new javax.swing.JTextField(10);
         numeroInsertarLabel = new javax.swing.JLabel();
@@ -29,7 +30,11 @@ public class ProgramaNodo extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         resultadoTextArea = new javax.swing.JTextArea();
         tituloLabel = new javax.swing.JLabel();
+        
+        // se crea una instancia del objeto Lista Enlazada del cual se van a tomar todos los métodos de este programa. 
         ListaEnlazada listaEnlazada = new ListaEnlazada();
+        
+        
         
         numeroInsertarLabel.setText("Valor a insertar:");
         numeroInsertarTextField.setText("");
@@ -38,8 +43,9 @@ public class ProgramaNodo extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 do{
                     try { 
-                        listaEnlazada.insertarNumero(Integer.parseInt(numeroInsertarTextField.getText()));
-                        //resultadoTextArea.setText("El numero ha sido ingresado correctamente");
+                        
+                        // Llama a la función insertarNumero cada vez que el botón es precionado y pasa el valor ingresado por el usuario. 
+                        listaEnlazada.insertarNumero(Integer.parseInt(numeroInsertarTextField.getText()));                   
                     }catch (NumberFormatException numberFormatException) {
                         JOptionPane.showMessageDialog(null,
                                 "El valor ingresado no es válido");
@@ -60,6 +66,7 @@ public class ProgramaNodo extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 do{
                     try {                       
+                        // esta opcion extrae de forma permanente el último elemento de la lista. 
                         resultadoTextArea.setText(String.valueOf(listaEnlazada.extraerUltimoNumero()));                        
                     }catch (NumberFormatException numberFormatException) {
                         JOptionPane.showMessageDialog(null,
@@ -71,9 +78,6 @@ public class ProgramaNodo extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null,
                                 "Se ha alcanzado el tamaño del arreglo");                 
                     }
-                    
-                    
-                    
                     x=2;
                 }while(x!=2);   
             }
