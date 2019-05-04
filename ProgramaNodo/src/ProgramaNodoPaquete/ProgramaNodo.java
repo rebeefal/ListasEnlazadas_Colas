@@ -128,7 +128,8 @@ public class ProgramaNodo extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 do{
                     try {  
-                        resultadoTextArea.setText(String.valueOf(listaEnlazada.mostrarPosicionNumero()));   
+                        resultadoTextArea.setText(String.valueOf(listaEnlazada.mostrarPosicionNumero(Integer.parseInt(posicionObtenerTextField.getText()))));   
+
                     }catch (NumberFormatException numberFormatException) {
                         JOptionPane.showMessageDialog(null,
                                 "El valor ingresado no es válido");
@@ -213,14 +214,29 @@ public class ProgramaNodo extends javax.swing.JFrame {
         vaciarColaButton.setText("Vaciar pila");
         vaciarColaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
+                do{
+                    try {                       
+                        resultadoTextArea.setText(listaEnlazada.vaciarPila());                        
+                    }catch (NumberFormatException numberFormatException) {
+                        JOptionPane.showMessageDialog(null,
+                                "El valor ingresado no es válido");
+                    }catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
+                    }catch (NullPointerException nullPointerException) {
+                        JOptionPane.showMessageDialog(null,
+                                "Se ha alcanzado el tamaño del arreglo");                 
+                    }
+                    x=2;
+                }while(x!=2); 
+     
             }
         });
 
         salirButton.setText("Salir");
         salirButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
+                 System.exit(0);
             }
         });
 

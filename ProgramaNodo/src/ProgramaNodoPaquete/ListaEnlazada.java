@@ -14,18 +14,7 @@ public class ListaEnlazada {
         primero = null;
         ultimo = null;
     }
-    
-    /*public void insertarNumero(int numero){
-        Nodo nodo = new Nodo(numero);
-        nodo.setSiguiente(null);
-        if(primero == null & ultimo == null){
-            primero = nodo;
-            ultimo = nodo;
-        }
-        ultimo.setSiguiente(nodo);
-        ultimo = ultimo.getSiguiente();  
-    }*/
-    
+ 
     
     public void insertarNumero(int numero){
         primero = new Nodo(numero, primero); 
@@ -50,9 +39,14 @@ public class ListaEnlazada {
         return numero;
     }
     
-    public int mostrarPosicionNumero(){
-   
-        int numero = ultimo.getNumero();       
+    public int mostrarPosicionNumero(int posicion){
+        int numero = 0;
+        Nodo temporal = primero;       
+        do {
+            temporal = temporal.getSiguiente();           
+            posicion--;
+        }while (posicion != 0);
+        numero = temporal.getNumero();
         return numero;
     }
     
@@ -80,21 +74,24 @@ public class ListaEnlazada {
     
     public String mostrarTodosElementos(){  
         
-        Nodo recorrer = primero;
+        Nodo temporal = primero;
         todoElementos = "";
-        while (recorrer!=null){
-            
-            todoElementos +=  (" ---> [ " + String.valueOf(recorrer.numero) + " ] ");
-            recorrer=recorrer.siguiente;
-            
+        while (temporal!=null){
+            todoElementos +=  ("  [ " + String.valueOf(temporal.numero) + "  ][ -]----> ");
+            temporal=temporal.siguiente;            
         }
         return todoElementos;
     }
     
+        public String vaciarPila(){ 
+            while(primero!=null){
+                primero = primero.getSiguiente();
+        }
+          
+        return "La pila esta vacia";
+    }
     
- 
-
-
-           
+    
+    
 }
 
